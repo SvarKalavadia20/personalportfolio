@@ -730,6 +730,271 @@ section h2.visible {
     100% { transform: translateY(0) scale(1); }
 }
 
+/* ========================== */
+/* Mobile Responsive Styles   */
+/* ========================== */
+@media (max-width: 768px) {
+    
+    /* General body adjustments */
+    body {
+            /* extra spacing on sides */
+        overflow-x: hidden;    /* prevent horizontal scrolling */
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column;
+        width: 95%;
+        top: 10px;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero section */
+    .hero {
+        padding: 6rem 1rem 2rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-quote {
+        font-size: 0.85rem;
+        padding: 0rem 1rem;
+    }
+
+    /* About section */
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .photo-card img {
+        max-width: 200px;
+    }
+
+    .description-card {
+        padding: 20px;
+    }
+
+    /* Skills section */
+    .skill-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .skill {
+        width: 90%;
+        justify-content: center;
+    }
+
+    /* Projects */
+    .project-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .project-container .card {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    /* Achievements */
+    .achievements {
+        padding: 60px 10px;       /* smaller padding */
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .achievement-cards {
+        flex-direction: column;
+        align-items: center;      /* center cards */
+        gap: 20px;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .achievement-card {
+        width: 90%;               /* almost full width */
+        margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9rem;
+        padding: 1rem 5px;
+    }
+}
+
+/* ========================== */
+/* Mobile Navbar / Burger Menu */
+/* ========================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0rem 1rem;
+        width: 95%;
+        border-radius: 10px;
+        background: rgba(0,0,0,0.7);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;               /* below navbar */
+        right: 0;
+        background: rgba(0,0,0,0.9);
+        flex-direction: column;
+        width: 200px;
+        max-width: 80%;
+        display: none;           /* hidden by default */
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        display: block;
+        width: 100%;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 100%;
+        height: 3px;
+        background: #00aaff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    /* Animate burger to X */
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* About Section Photo Card - Mobile Centering */
+    .about-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .photo-card {
+        margin: 0 auto !important; /* center horizontally */
+        flex: unset !important;     /* remove desktop flex sizing */
+        width: 200px;               /* optional, matches previous setting */
+    }
+
+    .photo-card img {
+        display: block;
+        margin: 0 auto;
+    }
+
+/* Skills Section - Proper Mobile Centering */
+.skill-items {
+    display: flex !important;
+    flex-direction: column !important;  /* stack vertically */
+    align-items: center !important;     /* center horizontally */
+    justify-content: center !important;
+    width: 100%;
+    gap: 15px;
+}
+
+.skill {
+    flex: none;               /* prevent stretching */
+    width: 80%;              /* natural width */
+    max-width: 90%;           /* don't exceed screen */
+    margin: 0 auto;           /* center each card */
+    justify-content: center !important;
+}
+
+/* Achievements Section - Mobile Fix */
+.achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* centers everything inside */
+        /* padding on left and right */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.achievement-cards {
+    display: flex;
+    flex-direction: column;  /* stack cards vertically */
+    align-items: center;     /* center cards horizontally */
+    gap: 20px;
+    width: 100%;
+}
+
+.achievement-card {
+    width: 100%;             /* full width of container */
+    max-width: 320px;        /* same for all cards */
+    margin: 0 auto;          /* ensure centered */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+section {
+        padding: 40px; /* top/bottom and left/right padding */
+    }
+
+    section h2 {
+        margin-bottom: 1rem; /* reduce space below headings */
+        font-size: 2rem;      /* optional: smaller headings for mobile */
+    }
+
+}
+
 
 
 
