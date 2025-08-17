@@ -193,6 +193,16 @@ document.addEventListener('DOMContentLoaded', () => {
     achievementCards.forEach(card => cardObserver.observe(card));
 });
 
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+
+    // Animate burger lines
+    burger.classList.toggle('toggle');
+});
+
 
 
 
