@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Mulish:wght@300;400;500;600;700&display=swap');
+
+
+/* Particles background */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+/* General Dark Theme */
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0a0f1c, #1a2a40);
+    color: white;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    cursor: url('images/cursor.png') 0 0, auto;
+}
+
+body, a, button, input, textarea, select {
+    cursor: url('images/cursor.png') 0 0, auto;
+}
+
+/* Optional: keep same cursor even on hover */
+a:hover, button:hover, input:hover, textarea:hover, select:hover {
+    cursor: url('images/cursor.png') 0 0, auto;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 25px; /* adjust to your navbar height */
+}
+
+/* Global Font Setup */
+body {
+    font-family: 'Mulish', Arial, sans-serif;
+}
+
+/* Headings use Josefin Sans */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.01rem 0.5rem;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px);    
+    -webkit-backdrop-filter: blur(10px); 
+    position: fixed;      
+    top: 20px;            
+    left: 50%;            
+    transform: translateX(-50%); 
+    z-index: 100;
+    width: 1000px;  
+    border-radius: 15px;  
+}
+
+
+
+.logo img {
+     height: 55px; /* Set exact size */
+    width: auto;
+    display: block; 
+   
+}
+
+
+.navbar .logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: #00aaff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-links i {
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+.nav-links li {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.nav-links li:hover {
+    background: rgba(0, 170, 255, 0.2);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    display: block;
+}
+
+.nav-links a.active {
+    background: rgba(31, 79, 138, 0.6);
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    color: white;
+    padding: 0.5rem 0.8rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 10rem 2rem 2rem 2rem; /* more breathing room */
+    font-size: 2rem; /* base size bigger */
+}
+
+.hero-name {
+    font-family: 'Fredoka One', cursive;
+    font-size: 5rem; /* BIG name */
+    color: #00aaff;
+    margin: 0.5rem 0 0 0;
+}
+
+.hero h1 span {
+    font-family: 'Pacifico', cursive;
+    color: #00aaff;
+    font-size: 3rem; /* the "Hi, I'm" also larger */
+}
+
+.hero h2 {
+    font-weight: 300;
+    margin-top: 1rem;
+    font-size: 2.5rem; /* subtitle also large */
+}
+
+.hero-quote {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 0.05rem; /* even smaller gap */
+}
+
+.social-icons a {
+    font-size: 1.6rem;       /* slightly bigger than before */
+    padding: 0.6rem;         /* slightly bigger circle */
+    border-radius: 50%;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    background: #ff6f61; /* change to your preferred hover color */
+    color: white;        /* icon color on hover */
+}
+
+
+
+
+
+.social-btn {
+    background: linear-gradient(145deg, #0a192f, #112240);
+    color: white;
+    border-radius: 50%; /* <-- this makes it fully round */
+    width: 40px;        /* button width */
+    height: 40px;       /* button height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+}
+
+
+/* Smooth transition for changing word */
+#changing-word {
+    display: inline-block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* About Section */
+/* About Section */
+#about {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Cards */
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,170,255,0.15);
+  padding: 25px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* Photo Card */
+.photo-card img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 2px solid rgba(0,170,255,0.3);
+  box-shadow: 0 0 15px rgba(0,170,255,0.25);
+}
+
+/* Description Card */
+.description-card h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #00aaff;
+}
+
+.description-card p {
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
+/* Buttons */
+.about-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,170,255,0.25);
+}
+
+.btn {
+  background: #00aaff;
+  color: white;
+}
+
+.btn:hover {
+  background: #0088cc;
+  box-shadow: 0 0 20px #00aaff;
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #00aaff;
+}
+
+.btn.secondary:hover {
+  background: #00aaff;
+  color: #fff;
+  box-shadow: 0 0 20px #00aaff;
+}
+
+/* Center content inside the right card */
+.description-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers the inner items horizontally */
+  text-align: center;    /* centers text */
+}
+
+/* Make sure the heading and paragraph are centered */
+.description-card h2,
+.description-card p {
+  text-align: center;
+}
+
+/* Center the buttons row */
+.about-buttons {
+  justify-content: center;  /* centers the button group */
+  width: 100%;
+}
+
+/* In case a single button needs centering */
+.description-card .btn {
+  align-self: center;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* equal height */
+  gap: 30px;
+  margin: 50px auto;
+  max-width: 1150px;
+}
+
+.photo-card {
+  flex: 1; /* smaller */
+  margin-left: -30px; /* shift left */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-card img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+}
+
+.description-card {
+  flex: 3; /* increased from 2 or 2.5 to 3 */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+
+/* Sections */
+
+.skills {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 50px; /* more left/right padding for breathing room */
+  text-align: center;
+}
+
+
+
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #00aaff;
+}
+
+.skill-category {
+  margin-bottom: 60px;
+}
+
+.skill-category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #00aaff;
+}
+
+.skill-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: rgba(255,255,255,0.05);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,170,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #00aaff;
+}
+
+.skill img {
+  width: 28px;
+  height: 28px;
+}
+
+.skill i {
+  font-size: 40px;       /* icon size */
+  margin-right: 10px;    /* space between icon and text */
+  vertical-align: middle;
+}
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+
+
+section {
+    padding: 80px 60px; /* less top/bottom space, same left/right */
+}
+
+
+/* Cards */
+
+
+/* ============================= */
+/* Projects Section Styling       */
+/* ============================= */
+
+/* Ensure the section heading uses Josefin Sans */
+#projects h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;       /* adjust size to match other sections */
+    color: #00aaff;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+/* Project container and cards */
+.project-container {
+    display: flex;
+    flex-direction: column;      /* stack vertically on small screens */
+    gap: 2rem;                   /* spacing between cards */
+    align-items: center;         /* center horizontally */
+    justify-content: center;
+}
+
+.project-container .card {
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.project-container .card:hover {
+    box-shadow: 0px 0px 15px #00aaff;
+    transform: translateY(-5px);
+}
+
+/* Project title inside the card */
+.project-name {
+    font-family: 'Josefin Sans', sans-serif; /* ensures project titles also use Josefin Sans */
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem 0;
+    color: #00aaff;
+    text-align: center;
+}
+
+/* Project status badge */
+.in-progress {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: #00aaff;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 50px;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+/* Achievements Section */
+.achievements {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 50px;
+    text-align: center;
+}
+
+.achievements h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #00aaff;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.achievements h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Container for achievement cards */
+.achievement-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Individual achievement card */
+.achievement-card {
+    flex: 1 1 250px; /* responsive width */
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00aaff;
+}
+
+.achievement-card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: jumpIn 0.8s forwards;
+}
+
+.achievement-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #00aaff;
+}
+
+.achievement-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.projects h2 {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+/* Section headings */
+/* Section Headings */
+section h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.2rem;           /* slightly bigger */
+    font-weight: 700;             /* bold */
+    color: #00aaff;               /* accent color */
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    letter-spacing: 1px;
+    opacity: 0;                   /* start hidden */
+    transform: translateY(40px);  /* slide-up effect */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    text-shadow: 2px 2px 10px rgba(0,170,255,0.3); /* subtle glow */
+}
+
+#about h2::after {
+    content: '';
+    display: block;
+    width: 140px;          /* small underline */
+    height: 5px;
+    background: linear-gradient(90deg, #00aaff, #ff6f61);
+    margin: 0.01px auto 0 auto;
+    border-radius: 2px;
+}
+
+
+/* Full-width underline for all section headings except ones with .no-underline */
+section h2:not(.no-underline)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #00aaff, #ff6f61);
+    margin: 10px 0 0 0;
+    border-radius: 2px;
+}
+
+
+
+/* Animate when in viewport */
+section h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-category h3 {
+    color: white;
+}
+
+#skills h3::after {
+    content: '';
+    display: block;
+    width: 110px;          /* small underline */
+    height: 2.5px;
+    background: linear-gradient(90deg, #00aaff, #ff6f61);
+    margin: 0.01px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* Initial hidden state for skill category headings */
+.skill-category h3 {
+    color: white;                /* your color change */
+    opacity: 0;
+    transform: translateY(40px); /* start slightly below */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animate when visible */
+.skill-category h3.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Initial state: hidden and slightly above */
+.skill {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.2s ease, transform 0.2s ease; /* faster */
+}
+
+
+/* Animated state: visible and jumped to place */
+.skill.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Optional: add a small bounce effect */
+@keyframes jumpIn {
+    0%   { transform: translateY(-30px) scale(0.8); }
+    60%  { transform: translateY(10px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+.skill.visible {
+    animation: jumpIn 0.8s forwards;
+}
+
+.project-container .card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-container .card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: jumpIn 0.8s forwards; /* optional bounce */
+}
+
+@keyframes jumpIn {
+    0%   { transform: translateY(-30px) scale(0.8); }
+    60%  { transform: translateY(10px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+/* Initial hidden state */
+.about-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animated state */
+.about-card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    animation: jumpIn 0.8s forwards; /* same bounce as skills */
+}
+
+/* Jump-in animation (same as skills) */
+@keyframes jumpIn {
+    0%   { transform: translateY(-30px) scale(0.8); }
+    60%  { transform: translateY(10px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

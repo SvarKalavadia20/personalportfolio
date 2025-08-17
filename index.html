@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svar Kalavadia Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Fredoka+One&family=Pacifico&family=Josefin+Sans:wght@400;600;700&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-laptop-code"></i> Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Hi, I'm</h1>
+            <h1 class="hero-name">Svar Kalavadia</h1>
+            <h2 class="no-underline">Coder | Problem-solver | <span id="changing-word"></span></h2>
+        </section>
+
+        <p class="hero-quote">“Turning ideas into code, one project at a time.”</p>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+            <a href="https://github.com/SvarKalavadia20" target="_blank" class="social-btn">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/svarkalavadia/" target="_blank" class="social-btn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/svarkalavadia20/" target="_blank" class="social-btn">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-container">
+                <div class="about-card photo-card">
+                    <img src="images/myphoto.jpg" alt="Your Photo">
+                </div>
+                <div class="about-card description-card">
+                    <h2 class="no-underline">About Me</h2>
+                    <p>Hi! I’m Svar Kalavadia — a coder, builder, and tech enthusiast. I love creating cool web projects, learning new technologies, and turning ideas into reality. When I’m not coding, you’ll find me exploring fun tech stuff or experimenting with new ideas.</p>
+                    <div class="about-buttons">
+                        <a href="resume.pdf" class="btn">📄 Résumé</a>
+                        <a class="btn" id="contact-btn" href="mailto:kalavadia.svar@gmail.com">📩 Contact Me</a>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skill-items">
+                    <div class="skill"><i class="devicon-c-plain colored"></i> C Programming</div>
+                    <div class="skill"><i class="devicon-cplusplus-plain colored"></i> C++</div>
+                    <div class="skill"><i class="devicon-html5-plain colored"></i> HTML</div>
+                    <div class="skill"><i class="devicon-css3-plain colored"></i> CSS</div>
+                    <div class="skill"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                    <div class="skill"><i class="devicon-java-plain colored"></i> Java</div>
+                    <div class="skill"><i class="devicon-python-plain colored"></i> Python</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks</h3>
+                <div class="skill-items">
+                    <div class="skill"><i class="devicon-react-original colored"></i> React</div>
+                    <div class="skill"><i class="devicon-nodejs-plain colored"></i> Node.js</div>
+                    <div class="skill"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <div class="skill-items">
+                    <div class="skill"><i class="devicon-git-plain colored"></i> Git</div>
+                    <div class="skill"><i class="devicon-github-original colored"></i> GitHub</div>
+                    <div class="skill"><i class="devicon-vscode-plain colored"></i> VS Code</div>
+                    <div class="skill"><i class="devicon-figma-plain colored"></i> Figma</div>
+                    <div class="skill"><i class="devicon-canva-original colored"></i> Canva</div>
+                    <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"> MongoDB</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects" >
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="card">
+                    <img src="images/project1.jpg" alt="Project 1" style="width:100%; border-radius:10px;">
+                    <h3 class="project-name">Campus Dash</h3>
+                    <p>A smart delivery platform for your campus that connects students with on-campus couriers to quickly and conveniently deliver food, essentials, and packages. It streamlines requests, tracks deliveries in real-time, and ensures a fast, reliable service right at your doorstep.</p>
+                    <span class="in-progress">IN PROGRESS</span>
+                </div>
+                <div class="card">
+                    <img src="images/project2.jpg" alt="Project 2" style="width:100%; border-radius:10px;">
+                    <h3 class="project-name">ClimaAlert</h3>
+                    <p>An AI-powered system that monitors real-time weather patterns and compares them with historical disaster data to predict potential natural disasters. Designed to provide early warnings and help communities prepare in advance.</p>
+                    <span class="in-progress">Completed</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="achievements">
+    <h2>Achievements</h2>
+    <div class="achievement-cards">
+        <div class="achievement-card">
+            <h3>Hackathon Winner</h3>
+            <p>Secured 1st place in the IIT Madras'2025 hackathon organsied by Techgyan.</p>
+        </div>
+        <div class="achievement-card">
+            <h3>Runner-up</h3>
+            <p>Secured 2nd Place in CREATIVE INGENUITY’25, organized by the Department of Mechanical Engineering, SRM Institute of Science and Technology.</p>
+        </div>
+        <div class="achievement-card">
+            <h3>4th Place</h3>
+            <p>Secured 4th place at IdeaSpark’2025, an ideathon organised by the Founders Club</p>
+        </div>
+        <!-- Add more achievement cards here -->
+    </div>
+</section>
+
+
+
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Svar Kalavadia. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
