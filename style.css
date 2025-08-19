@@ -138,6 +138,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 5rem; /* BIG name */
     color: #00aaff;
     margin: 0.5rem 0 0 0;
+    text-shadow: 
+    0 0 7px #00aaff,   /* subtle close glow */
+    0 0 0px #00aaff, /* larger, softer glow */
+    0 0 0px #00aaff; /* faint outer glow */
 }
 
 .hero h1 span {
@@ -769,6 +773,8 @@ section h2.visible {
 
     .hero-name {
         font-size: 3rem;
+        text-shadow: 
+            0 0 3px #00aaff,
     }
 
     .hero h2 {
@@ -993,6 +999,113 @@ section {
         font-size: 2rem;      /* optional: smaller headings for mobile */
     }
 
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px #00c6ff, 0 0 10px #0072ff; /* reduced glow */
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 6px #00c6ff, 0 0 15px #0072ff; /* reduced glow on hover */
+  background: linear-gradient(135deg, #00e0ff, #0090ff);
+}
+
+
+
+/* ===== Scroll Spy (right rail) ===== */
+.scroll-spy {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.spy-track {
+  position: relative;
+  width: 6px;
+  height: 130px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  margin-left: 14px;
+}
+
+.spy-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(180deg, #ffffff, #00aaff);
+  border-radius: 4px;
+
+  /* ✨ Steady glow (no pulsing) */
+  box-shadow: 0 0 0px #00d4ff,
+              0 0 5px #7dd4ff,
+              0 0 10px #00aaff;
+
+  transition: height 0.25s ease-out;
+}
+
+
+
+/* Hide on small screens (optional) */
+@media (max-width: 768px){
+  .scroll-spy {
+    right: 5px; /* tuck it closer to the edge */
+  }
+
+  .spy-track {
+    width: 1.5px;       /* thinner track */
+    height: 200px;    /* slightly shorter */
+    margin-left: 0;   /* center it properly */
+    border-radius: 3px;
+  }
+
+  .spy-progress {
+    border-radius: 3px;
+    box-shadow: 0 0 1px #00d4ff,
+                0 0 2px #7dd4ff,
+                0 0 4px #00aaff; /* reduced glow */}
+}
+
+/* ===== Hide default scrollbars ===== */
+html, body {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE + Edge (old) */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Edge */
+}
+
+#cursorCircle {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #00aaff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
 }
 
 
