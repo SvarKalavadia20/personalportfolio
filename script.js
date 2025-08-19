@@ -1,5 +1,5 @@
 // Smooth cycling adjectives in hero section
-const words = ["Dreamer", "Snackaholic", "Napster", "Chillaxer", "Couch Explorer"];
+const words = ["Techie", "Builder", "Cybernaut", "Dreamer", "Napster"];
 let index = 0;
 const changingWord = document.getElementById("changing-word");
 
@@ -259,6 +259,7 @@ function animate() {
   requestAnimationFrame(animate);
 }
 animate();
+
 
 
 
