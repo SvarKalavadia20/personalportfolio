@@ -1123,10 +1123,11 @@ body::-webkit-scrollbar {
 
 /* Hide cursor circle on mobile */
 @media (max-width: 768px) {
-    .cursor-circle {
-        display: none !important;
+    #cursorCircle {
+        display: none !important; /* hide custom circle cursor on mobile */
     }
 }
+
 
 
 
