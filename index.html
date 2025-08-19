@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Svar Kalavadia Portfolio</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+    <title>[svar.is-a.dev]</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
@@ -17,11 +19,14 @@
     <!-- Particles Background -->
     <div id="particles-js"></div>
 
+    <div id="cursorCircle"></div>
+
+
     <div class="content">
         <!-- Navbar -->
         <nav class="navbar">
             <div class="logo">
-                <img src="images/logo.png" alt="Logo">
+                <img src="images/logo 1.png" alt="Logo">
             </div>
             
             <ul class="nav-links">
@@ -43,7 +48,7 @@
         <section class="hero">
             <h1>Hi, I'm</h1>
             <h1 class="hero-name">Svar Kalavadia</h1>
-            <h2 class="no-underline">Coder | Developer | <span id="changing-word"></span></h2>
+            <h2 class="no-underline">Coder | Problem-solver | <span id="changing-word"></span></h2>
         </section>
 
         <p class="hero-quote">“Turning ideas into code, one project at a time.”</p>
@@ -71,8 +76,8 @@
                     <h2 class="no-underline">About Me</h2>
                     <p>Hi! I’m Svar Kalavadia — a coder, builder, and tech enthusiast. I love creating cool web projects, learning new technologies, and turning ideas into reality. When I’m not coding, you’ll find me exploring fun tech stuff or experimenting with new ideas.</p>
                     <div class="about-buttons">
-                        <a href="resume.pdf" class="btn">📄 Résumé</a>
-                        <a class="btn" id="contact-btn" href="mailto:kalavadia.svar@gmail.com">📩 Contact Me</a>
+                        <a href="docs/Svar_Kalavadia_Resume.pdf" class="btn" target="_blank">📄 Résumé</a>
+                        <a class="btn" id="contact-btn"  href="mailto:kalavadia.svar@gmail.com">📩 Contact Me</a>
 
 
                     </div>
@@ -162,6 +167,17 @@
             <p>© 2025 Svar Kalavadia. All rights reserved.</p>
         </footer>
     </div>
+
+    <button id="backToTop">↑</button>
+
+    <!-- Scroll Spy (right side) -->
+<div class="scroll-spy">
+  <div class="spy-track">
+    <div class="spy-progress"></div>
+  </div>
+</div>
+
+
 
     <script src="script.js"></script>
 </body>
