@@ -1128,6 +1128,35 @@ body::-webkit-scrollbar {
     }
 }
 
+@media (max-width: 768px) {
+#backToTop {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px #00c6ff, 0 0 10px #0072ff; /* reduced glow */
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 6px #00c6ff, 0 0 15px #0072ff; /* reduced glow on hover */
+  background: linear-gradient(135deg, #00e0ff, #0090ff);
+}
+}
+
+
 
 
 
