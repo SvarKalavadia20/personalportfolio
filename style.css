@@ -144,6 +144,19 @@ h1, h2, h3, h4, h5, h6 {
     0 0 0px #00aaff; /* faint outer glow */
 }
 
+@media (max-width: 768px) {
+    .hero-name {
+        font-family: 'Fredoka One', cursive;
+        font-size: 5rem; /* BIG name */
+        color: #00aaff;
+        margin: 0.5rem 0 0 0;
+        text-shadow: 
+        0 0 3px #00aaff,   /* subtle close glow */
+        0 0 0px #00aaff, /* larger, softer glow */
+        0 0 0px #00aaff; /* faint outer glow */
+    }
+}
+
 .hero h1 span {
     font-family: 'Pacifico', cursive;
     color: #00aaff;
@@ -1107,6 +1120,15 @@ body::-webkit-scrollbar {
   z-index: 9999;
   transform: translate(-50%, -50%);
 }
+
+/* Hide cursor circle on mobile */
+@media (max-width: 768px) {
+    .cursor-circle {
+        display: none !important;
+    }
+}
+
+
 
 
 
