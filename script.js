@@ -1,5 +1,5 @@
 // Smooth cycling adjectives in hero section
-const words = ["Techie", "Builder", "Cybernaut", "Student", "Dreamer"];
+const words = ["Dreamer", "Snackaholic", "Napster", "Chillaxer", "Couch Explorer"];
 let index = 0;
 const changingWord = document.getElementById("changing-word");
 
@@ -202,6 +202,63 @@ burger.addEventListener('click', () => {
     // Animate burger lines
     burger.classList.toggle('toggle');
 });
+
+const backToTopBtn = document.getElementById("backToTop");
+
+// Show button when user scrolls down
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "flex";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+// Scroll smoothly to top when clicked
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+// ===== Scroll Spy (About, Skills, Projects, Achievements) =====
+// Select the progress bar
+const progressBar = document.querySelector('.spy-progress');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+
+  progressBar.style.height = scrollPercent + "%";
+});
+
+const circle = document.getElementById("cursorCircle");
+
+let mouseX = 0, mouseY = 0;
+let circleX = 0, circleY = 0;
+
+// This matches your dot.png hotspot (8,8)
+const hotspotX = 16;
+const hotspotY = 16;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX + hotspotX;
+  mouseY = e.clientY + hotspotY;
+});
+
+function animate() {
+  // Smooth interpolation
+  circleX += (mouseX - circleX) * 0.1;
+  circleY += (mouseY - circleY) * 0.1;
+
+  circle.style.left = circleX + "px";
+  circle.style.top = circleY + "px";
+
+  requestAnimationFrame(animate);
+}
+animate();
 
 
 
