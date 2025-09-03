@@ -29,13 +29,6 @@ You can view the live website here: [svarkalavadia.vercel.app](#)
 
 ## 📁 Project Structure
 
-├── index.html # Main HTML file
-├── style.css # Stylesheet
-├── script.js # Custom JavaScript for interactions
-├── images/ # Images used in the website (photos, project images, logos)
-├── docs/ # Docs attached in this website
-└── README.md # Project documentation
-
 ├── index.html   # Main HTML file  
 ├── style.css    # Stylesheet (UI & animations)  
 ├── script.js    # Custom JavaScript for interactions  
