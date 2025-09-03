@@ -1,7 +1,5 @@
 # # Svar Kalavadia Portfolio Website
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-SvarKalavadia-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/svarkalavadia/)
-
 Welcome to my personal portfolio website! This website showcases my skills, projects, achievements, and provides ways to contact me.
 
 ## 🌐 Live Demo
@@ -64,12 +62,10 @@ This project is open source and available under the MIT License.
 
 ## ✨ Author
 
-Svar Kalavadia
+**Svar Kalavadia**  
 
-GitHub: SvarKalavadia20
-
-LinkedIn: svarkalavadia
-
+GitHub: [SvarKalavadia20](https://github.com/SvarKalavadia20)  
+LinkedIn: [svarkalavadia](https://www.linkedin.com/in/svarkalavadia/)  
    
    
 
